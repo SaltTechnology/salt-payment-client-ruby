@@ -86,7 +86,7 @@ class CreditCard
 	attr_reader :getCreditCardNumber,	:getExpiryDate,	:getCvv2
 	attr_reader :getStreet,				:getSecureCode, :getZip
  
-	def initialize(creditCardNumber, expiryDate, cvv2, street, zip, secureCode=nil, magneticData = nil)
+	def initialize(creditCardNumber, expiryDate, cvv2=nil, street=nil, zip=nil, secureCode=nil, magneticData = nil)
 		@creditCardNumber = creditCardNumber
 		@expiryDate = expiryDate
 		@cvv2 = cvv2
