@@ -390,18 +390,18 @@ class StorageReceipt
 			
 			if (customerProfileAvailable != nil && customerProfileAvailable)
 				profile = CustomerProfile.new()
-				profile.setLegalName(@params["CUSTOMER_PROFILE_LEGAL_NAME"])
-				profile.setTradeName(@params["CUSTOMER_PROFILE_TRADE_NAME"])
-				profile.setWebsite(@params["CUSTOMER_PROFILE_WEBSITE"])
-				profile.setFirstName(@params["CUSTOMER_PROFILE_FIRST_NAME"])
-				profile.setLastName(@params["CUSTOMER_PROFILE_LAST_NAME"])
-				profile.setPhoneNumber(@params["CUSTOMER_PROFILE_PHONE_NUMBER"])
-				profile.setFaxNumber(@params["CUSTOMER_PROFILE_FAX_NUMBER"])
-				profile.setAddress1(@params["CUSTOMER_PROFILE_ADDRESS1"])
-				profile.setAddress2(@params["CUSTOMER_PROFILE_ADDRESS2"])
-				profile.setCity(@params["CUSTOMER_PROFILE_CITY"])
-				profile.setProvince(@params["CUSTOMER_PROFILE_PROVINCE"])
-				profile.setPostal(@params["CUSTOMER_PROFILE_COUNTRY"])
+				profile.legalName = @params["CUSTOMER_PROFILE_LEGAL_NAME"]
+			        profile.tradeName = @params["CUSTOMER_PROFILE_TRADE_NAME"]
+			        profile.website = @params["CUSTOMER_PROFILE_WEBSITE"]
+			        profile.firstName = @params["CUSTOMER_PROFILE_FIRST_NAME"]
+			        profile.lastName = @params["CUSTOMER_PROFILE_LAST_NAME"]
+			        profile.phoneNumber = @params["CUSTOMER_PROFILE_PHONE_NUMBER"]
+			        profile.faxNumber = @params["CUSTOMER_PROFILE_FAX_NUMBER"]
+			        profile.address1 = @params["CUSTOMER_PROFILE_ADDRESS1"]
+			        profile.address2 = @params["CUSTOMER_PROFILE_ADDRESS2"]
+			        profile.city = @params["CUSTOMER_PROFILE_CITY"]
+			        profile.province = @params["CUSTOMER_PROFILE_PROVINCE"]
+			        profile.postal = @params["CUSTOMER_PROFILE_COUNTRY"]
 			end
 			
 			@paymentProfile = PaymentProfile.new(creditCard, profile)
